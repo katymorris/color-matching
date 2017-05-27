@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1",
-    "jquery.transit": "^0.9.12",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

@@ -24,14 +24,6 @@ var config = {
 			{ 
 				test: /\.css$/, 
 				loader: "style-loader!css-loader" 
-			},
-						{ 
-				test: /\.js?/, 
-				loader: "jquery" 
-			},
-			{
-				test: /\.js?/,
-				loader: "jquery.transit"
 			}
 		]
 	}
