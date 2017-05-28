@@ -10,10 +10,13 @@
 	margin-bottom: 20px;
 }
 	/* flip the pane when hovered */
-	.card-container:hover .card-box, .card-container.hover .card-box {
+/*	.card-container:hover .card-box {
 		transform: rotateY(180deg);
 	}
-
+*/
+	.card-flip {
+		transform: rotateY(180deg);
+	}
 .card-container, .card-front, .card-back {
 	width: 300px;
 	height: 300px;
