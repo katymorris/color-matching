@@ -13,7 +13,7 @@ class App extends React.Component {
 		var matchingBoxNum = 12;
 		var matchingBox = [];
 		for (var i=0;i < matchingBoxNum;i++) {
-			matchingBox.push(<Box/>)
+			matchingBox.push(<Box key={i}/>)
 		}
 		return (
 			<div className="container">

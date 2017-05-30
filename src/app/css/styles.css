@@ -1,3 +1,10 @@
+.push {
+	clear: both;
+}
+#app {
+	text-align: center;
+	margin-top: 80px;
+}
 /* entire container, keeps perspective */
 .container {
 	margin: 0 auto;
@@ -18,8 +25,8 @@
 		transform: rotateY(180deg);
 	}
 .card-container, .card-front, .card-back {
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 }
 .card-front {
 	background-color: gray;
@@ -31,7 +38,7 @@
 .card-box {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
+	height: 100%;
 	position: relative;
 }
 
