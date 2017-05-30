@@ -3,12 +3,20 @@ import PropTypes from 'prop-types';
 
 
 export class Box extends React.Component {
+	constructor(props) {
+		super();
+		this.color = props.color
+		this.flipped = false
+	}
+
 	onBoxClick() {
-		var cardBox = this.div.querySelector('.card-box')
-		cardBox.classList.add("card-flip")
+		var cardBox = this.div.querySelector('.card-box');
+		cardBox.classList.add("card-flip");
+		this.flipped = true
+		
+		
 	}
 	render() {
-			console.log(this.props)
 		var boxStyle = {
 		  backgroundColor: this.props.color
 		}

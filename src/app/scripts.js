@@ -1,6 +1,6 @@
 /* -------------------- GLOBALS -------------------- */
 /* ------------------------------------------------ */
-var perLine = 3;
+var perLine = 4;
 /* ----------- BROWSER SUPPORT ---------- */
 
 //check if user's browser is Chrome
