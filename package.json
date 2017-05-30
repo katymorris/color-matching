@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline",
     "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.2.1",
+    "jsdom": "^11.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

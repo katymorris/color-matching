@@ -1,4 +1,7 @@
 import css from "./css/styles.css";
+import $ from 'jquery';
+import exec from 'script-loader!./scripts.js';
+// import jsdom from "jsdom";
 import React from "react";
 import { render } from "react-dom";
 import PropTypes from 'prop-types';
@@ -9,7 +12,6 @@ class App extends React.Component {
 	render() {
 		var matchingBoxNum = 12;
 		var matchingBox = [];
-		console.log('before')
 		for (var i=0;i < matchingBoxNum;i++) {
 			matchingBox.push(<Box/>)
 		}

@@ -11,7 +11,24 @@ var config = {
 		filename: "bundle.js",
 		publicPath: "/app/",
 	},
+	resolve: {
+        alias: {
+            jquery: "jquery/src/jquery"
+        }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
 	module: {
+				// rules: [
+		  //     {
+		  //       test: /\.exec\.js$/,
+		  //       use: [ 'script-loader' ]
+		  //     }
+		  //   ]
 		loaders: [
 			{
 				test: /\.js?/,
@@ -21,12 +38,17 @@ var config = {
 					presets: ["react", "es2015", "stage-2"]
 				}
 			},
+			{
+		        test: /\.exec\.js$/,
+		        include: SRC_DIR,
+		        loader: [ 'script-loader' ]
+		     },
 			{ 
 				test: /\.css$/, 
 				loader: "style-loader!css-loader" 
 			}
 		]
-	}
+	},
 };
 
 module.exports = config;
