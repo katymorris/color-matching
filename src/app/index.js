@@ -12,8 +12,32 @@ class App extends React.Component {
 	render() {
 		var matchingBoxNum = 12;
 		var matchingBox = [];
-		for (var i=0;i < matchingBoxNum;i++) {
-			matchingBox.push(<Box key={i}/>)
+		var colorMatchNum = 2;
+		var colors = ["red", "red", "blue", "blue", "green", "green", "orange", "orange"]
+		var shuffledColors = shuffle(colors);
+		//shuffle colors
+		function shuffle(array) {
+		  var currentIndex = array.length, temporaryValue, randomIndex;
+
+		  // While there remain elements to shuffle...
+		  while (0 !== currentIndex) {
+
+		    // Pick a remaining element...
+		    randomIndex = Math.floor(Math.random() * currentIndex);
+		    currentIndex -= 1;
+
+		    // And swap it with the current element.
+		    temporaryValue = array[currentIndex];
+		    array[currentIndex] = array[randomIndex];
+		    array[randomIndex] = temporaryValue;
+		  }
+
+		  return array;
+		}
+		//create boxes and send props
+		for (var i=0;i < shuffledColors.length;i++) {
+			console.log(shuffledColors[i])
+			matchingBox.push(<Box key={i} color={shuffledColors[i]}/>)
 		}
 		return (
 			<div className="container">
