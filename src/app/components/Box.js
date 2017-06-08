@@ -17,11 +17,25 @@ export class Box extends React.Component {
 			element2.classList.add('matched');
 			element1.classList.remove('flipped');
 			element2.classList.remove('flipped');
+
+			if (document.getElementsByClassName("matched").length == 8) {
+
+				var delayWinning = 1000;
+
+				setTimeout(function() {
+					alert("You Won!")
+				}, delayWinning);
+			}
 		} else {
 			element1.classList.remove('flipped');
 			element2.classList.remove('flipped');
-			element1.classList.remove('card-flip');
-			element2.classList.remove('card-flip');
+
+			var delayFlip = 1000;
+
+			setTimeout(function() {
+			  	element1.classList.remove('card-flip');
+				element2.classList.remove('card-flip');
+			}, delayFlip);
 		}
 	}
 
